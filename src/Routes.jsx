@@ -8,6 +8,9 @@ import ToolCategoryBrowse from './pages/tool-category-browse';
 import PrivacyPolicyLegal from './pages/privacy-policy-legal';
 import IndividualToolPage from './pages/individual-tool-page';
 import Homepage from './pages/homepage';
+import PDFToolsHub from './pages/pdf-tools-hub';
+import MultiCategoryToolDashboard from './pages/multi-category-tool-dashboard';
+import AdvancedToolInterface from './pages/advanced-tool-interface';
 
 const Routes = () => {
   return (
@@ -22,6 +25,9 @@ const Routes = () => {
         <Route path="/privacy-policy-legal" element={<PrivacyPolicyLegal />} />
         <Route path="/individual-tool-page" element={<IndividualToolPage />} />
         <Route path="/homepage" element={<Homepage />} />
+        <Route path="/pdf-tools-hub" element={<PDFToolsHub />} />
+        <Route path="/multi-category-tool-dashboard" element={<MultiCategoryToolDashboard />} />
+        <Route path="/advanced-tool-interface" element={<AdvancedToolInterface />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>
