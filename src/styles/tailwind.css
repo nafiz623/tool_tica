@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-primary: #8B5CF6; /* violet-500 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    --color-secondary: #3B82F6; /* blue-500 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    --color-accent: #06B6D4; /* cyan-500 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Background & Surface */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #F8FAFC; /* slate-50 */
+    --color-surface: #1E293B; /* slate-800 */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #F8FAFC; /* slate-50 */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Text Colors */
+    --color-muted: #475569; /* slate-600 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Interactive Elements */
+    --color-border: rgba(255, 255, 255, 0.1); /* white/10 */
+    --color-input: #1E293B; /* slate-800 */
+    --color-ring: #8B5CF6; /* violet-500 */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Glassmorphism Variables */
+    --glass-bg: rgba(30, 41, 59, 0.8); /* slate-800/80 */
+    --glass-border: rgba(255, 255, 255, 0.1); /* white/10 */
+    --glass-shadow: rgba(139, 92, 246, 0.1); /* violet-500/10 */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  /* Typography Classes */
+  .font-heading {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+
+  /* Glassmorphism Utilities */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-card {
+    @apply glass rounded-xl shadow-lg;
+    box-shadow: 0 8px 32px var(--glass-shadow);
+  }
+
+  /* Gradient Utilities */
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+  }
+
+  /* Animation Utilities */
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  /* Elevation System */
+  .elevation-1 {
+    box-shadow: 0 1px 3px rgba(139, 92, 246, 0.05);
+  }
+
+  .elevation-2 {
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.08);
+  }
+
+  .elevation-3 {
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.12);
+  }
+
+  .elevation-4 {
+    box-shadow: 0 16px 48px rgba(139, 92, 246, 0.16);
+  }
+}
